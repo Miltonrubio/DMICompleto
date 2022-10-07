@@ -25,6 +25,13 @@ export default {
                 localStorage.clear();
             
             },
+            limpiarUno(proyectos,index){
+                this.proyectos[index]="";
+                this.proyectos.splice(index,1)
+                localStorage.clear(proyectos.index);
+                this.saveData();
+                
+            },
         regsitrarProyecto() {
             const proyecto = {
                 proyecto: this.proyecto,
@@ -91,7 +98,7 @@ export default {
             </form>
         </div>
         
-    <TotalProyectos :numeroProyectos="numeroProyectos" :proyectos="proyectos" :cambiarUrgencia="cambiarUrgencia" :limpiarData="limpiarData"></TotalProyectos>
+    <TotalProyectos :numeroProyectos="numeroProyectos" :proyectos="proyectos" :cambiarUrgencia="cambiarUrgencia" :limpiarData="limpiarData" :limpiarUno="limpiarUno" ></TotalProyectos>
 
     </div>
 

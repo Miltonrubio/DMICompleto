@@ -35,7 +35,7 @@
                         :class="proyect.completado ?  'bg-success':'bg-danger' "> {{proyect.completado ?
                         "Completado" : "Incompleto" }}</td>
                     <td>
-                        <button class="btn btn-danger my-4" @click="limpiarUno()">Eliminar</button>
+                        <button  class="btn btn-danger my-4" @click="limpiarUno(proyect, index)">Eliminar</button>
                     </td>
                 </tr>
             </tbody>
